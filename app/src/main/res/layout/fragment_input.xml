@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 借入先 -->
+    <EditText
+        android:id="@+id/creditorEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="借入先" />
+
+    <!-- 借入日（カレンダーピッカー） -->
+    <EditText
+        android:id="@+id/loanDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="借入日"
+        android:focusable="false"
+        android:clickable="true" />
+
+    <!-- 借入金額 -->
+    <EditText
+        android:id="@+id/amountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="借入金額" />
+
+    <!-- 借入利率 -->
+    <EditText
+        android:id="@+id/interestRateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="借入利率 (%)" />
+
+    <!-- 返済方法（ドロップダウンリスト） -->
+    <Spinner
+        android:id="@+id/repaymentMethodSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 毎月の返済額（リボ払い時表示） -->
+    <EditText
+        android:id="@+id/monthlyRepaymentAmountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="毎月の返済額"
+        android:visibility="gone" />
+
+    <!-- 分割回数（分割払い時表示） -->
+    <EditText
+        android:id="@+id/numberOfInstallmentsEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="分割回数"
+        android:visibility="gone" />
+
+    <!-- 毎月の返済日（日付選択） -->
+    <Spinner
+        android:id="@+id/monthlyRepaymentDateSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- メモ -->
+    <EditText
+        android:id="@+id/noteEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="メモ（任意）" />
+
+    <!-- 保存ボタン -->
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="保存"
+        android:layout_gravity="center_horizontal"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal">
+
+        <!-- 編集ボタン -->
+        <Button
+            android:id="@+id/editButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="編集"
+            android:layout_marginEnd="8dp" /> <!-- 右側に間隔を設定 -->
+
+        <!-- 削除ボタン -->
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="削除"
+            android:layout_marginStart="8dp" /> <!-- 左側に間隔を設定 -->
+
+    </LinearLayout>
+
+</LinearLayout>
